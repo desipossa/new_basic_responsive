@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표를 만들어보자.</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+
+    <style>
+        .tb01 caption {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            clip: rect(0);
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        .tb01 {
+            /* border: 1px solid #ddd; */
+            width: 600px;
+            border-collapse: collapse;
+            border-top: 2px solid tomato;
+        }
+
+        .tb01 td {
+            border-bottom: 1px solid #ddd;
+            padding: 12px 24px;
+        }
+
+        .tb01 th {
+            border-bottom: 1px solid #ddd;
+            height: 40px;
+            padding: 0 24px;
+            text-align: left;
+            font-weight: 500;
+            background: #f9f9f9;
+        }
+
+        .tb01 td:not(:last-child) {
+            border-right: 1px solid #ddd;
+        }
+
+        .tb01 th~th {
+            border-left: 1px solid #ddd;
+        }
+
+        .r_table {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="r_table">
+        <table class="tb01">
+            <caption>이 표는 날림임...</caption>
+            <colgroup>
+                <col style="width:200px" />
+                <col style="" />
+                <col style="width:200px" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>01</th>
+                    <th>01</th>
+                    <th>01</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">01</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, aperiam?</td>
+                    <td>03</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>03</td>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>02</td>
+                    <td>03</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">이건 무엇??? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
+                        aspernatur!
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</body>
+
+</html>

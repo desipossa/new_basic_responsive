@@ -38,8 +38,25 @@
     white-space: nowrap;
 }
 
+#header .gnb>ul>li.on>a {
+    color: tomato;
+}
+
 #header .mopen {
     display: none;
+}
+
+.sub_page {
+    background: #333;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 900;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 300px;
 }
 
 @media (max-width:768px) {
